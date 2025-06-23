@@ -62,3 +62,11 @@ while numbers >=10:
     numbers = numbers - 1 
 """
 
+name = 'Harsh'
+print(name[-1])
+
+# removing something from a name
+
+name1 = 'Mitali'
+name2 = name1[1:]
+print(name2)
