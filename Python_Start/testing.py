@@ -60,7 +60,7 @@ numbers = 1
 while numbers >=10:
     print(numbers)
     numbers = numbers - 1 
-"""
+
 
 name = 'Harsh'
 print(name[-1])
@@ -70,3 +70,9 @@ print(name[-1])
 name1 = 'Mitali'
 name2 = name1[1:]
 print(name2)
+
+a = "Python is cool"
+print(a[7:-5])
+"""
+a = "Python is cool"
+print(a[0:6])
