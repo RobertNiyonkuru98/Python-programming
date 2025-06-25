@@ -52,7 +52,7 @@ g = [2*(e + f)]
 print(b)
 print(c)
 print(g)
-"""
+
 a = 2
 b = 5
 c = a
@@ -61,7 +61,7 @@ b = c
 print(a)
 print(b)
 
-"""import math
+import math
 a = float(input("Enter the first point, a: "))
 b = float(input("Enter the second point, b: "))
 (x, y) = (0, 0)
@@ -82,7 +82,7 @@ print(Point_2)
 
 distance = math.sqrt((x2-x1)**2 + (y2-y1)**2)
 print("distance =", "square root of (x2-x1)**2 + (y2-y1)**2", "=", distance )
-"""
+
 import math
 x1 = (float(input("Enter the first position on x1: ")))
 y1 = (float(input("Enter the second position on y1: ")))
@@ -119,3 +119,47 @@ else:
         print("The triangle is Isosceles.")
     else:
         print("The triangle is Scalene.")
+
+
+# CHAPTER 3
+
+a = input("Enter the first number: ")
+b = input("Enter the second number: ")
+c = input("Enter the third number: ")
+
+big = (a if (a > c) else c) if (a > b) else (b if (b > c) else c)
+print(big)
+
+hbbooks = {'Programming in C#': 2014, 'Algorithms': 2015, 'Python': 2016}
+print(hbbooks.get('Programming in C#', 'Wrong Choice'))
+print(hbbooks.get('Algorithms', 'Wrong Choice'))
+print(hbbooks.get('Python', 'Wrong Choice'))
+danbrown = {'The davinci code': 2003, 'Angels and Demons': 2004}
+print(danbrown.get('The Davinci code', 'Wrong Choice'))
+print(danbrown.get('Angelos and Demons', 'Wrong Choice'))
+favbook = {'Dante\'s inferno': 2000, 'Atomic Habits': 2020}
+print(favbook.get('Dante inferno', 'Wrong Choice'))
+print(favbook.get('Atomic Habits', 'Wrong Choice'))
+"""
+n = int(input("Enter the factorial number: "))
+factorial = 1
+i = 1
+while i<=n :
+    factorial *= i
+    i += 1
+print('factorial of ', n, 'is', factorial)
+
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+power = 1
+i = 1
+while i <= b :
+    power *= a
+    i += 1
+print(a, 'to the power of ', b, 'is', power)
+
+a = int(input("Enter the first term of Arithmetic progression: "))
+d = int(input("Enter the common difference: "))
+n = int(input("Enter the number of terms of Arithmetic progression: "))
+i = 1
+sum = 0
