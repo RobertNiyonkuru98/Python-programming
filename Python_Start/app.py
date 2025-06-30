@@ -129,7 +129,7 @@ for number in numbers:
 # Tuples
 
 numbers = (1, 2, 3)
-"""
+
 
 tup1 = (2, 3)
 print(tup1)
@@ -142,3 +142,103 @@ tup3 = (102, 'Shiv')
 (code2, name2)=tup3
 print('The code of ',name1,' is ',code1,'The code of ',name2, ' is ',code2 )
 print('The code of ',name2, ' is ',code2)
+
+
+
+#FUNCTIONS
+
+def greet():
+    print("Hi there")
+    print("Welcome aboard")
+
+
+greet()
+
+#Arguments
+
+def greet(first_name, last_name):
+    print(f"Hello {first_name} {last_name}")
+    print("Welcome aboard")
+
+greet("Tony", "Robert")
+greet("Oleg", "Scott")
+
+# Types of functions
+# 1- Perform a task
+# 2- Return a value
+
+def get_greeting(name):
+    return f"Hello {name}"
+
+message = get_greeting("Robert")
+file = open("context.txt", "w")
+file.write(message) #??
+file.close()
+"""
+
+def increment(number, by):
+    return number + by
+
+print(increment(10, 20))
+
+# Default argument
+
+def increment(number, by=1):
+    return number + by
+
+print(increment(10, 20))
+
+# args, wait and what?
+
+def multiply(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+print(multiply(2, 3, 4, 5))
+
+#ARGS
+
+def save_user(**user):
+    print(user["name"])
+
+save_user(id=1, name="Tony", age=22)
+
+def capital_city(**city):
+    print(city)
+
+capital_city(Nigeria="Abuja", Zambia="Lusaka", Rwanda="Kigali")
+
+
+# Scope
+
+def greet(name):
+    message = "a"
+
+def send_email(name):
+    message = "b"
+
+print(greet("Mosh"))
+
+# Activity
+
+fruits = ["apple", "banana", "cherry", "mango", "Cherry"]
+
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
+
+new_fruit = input("Enter fruit name: ")
+fruits.append(new_fruit)
+
+print("\nAllfruits:")
+for i, fruit in enumerate(fruits):
+    print(f"{i}: {fruit}")
+
+student_grades = {"Tony":"A", "Robert":"B", "Mitali":"C"}
+print("Tony's grade: ",student_grades["Tony"])
+
+student_grades["Oleg"] = "B+"
+print("\nAll student grades: ")
+for name, grade in student_grades.items():
+    print(f"{name}: {grade}")
