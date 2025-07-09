@@ -174,7 +174,7 @@ message = get_greeting("Robert")
 file = open("context.txt", "w")
 file.write(message) #??
 file.close()
-"""
+
 
 def increment(number, by):
     return number + by
@@ -213,32 +213,31 @@ capital_city(Nigeria="Abuja", Zambia="Lusaka", Rwanda="Kigali")
 
 # Scope
 
+message = "a"
 def greet(name):
-    message = "a"
-
-def send_email(name):
+    global message
     message = "b"
 
-print(greet("Mosh"))
+greet("Robert")
+print(message)
 
-# Activity
+# Exercise
 
-fruits = ["apple", "banana", "cherry", "mango", "Cherry"]
+def fizz_buzz(input):
+    if (input % 3 == 0) and (input % 5 == 0):
+        return "FizzBuzz"
+    if input % 3 == 0:
+        return "Fizz"
+    if input % 5 == 0:
+        return "Buzz"
 
-print("First fruit:", fruits[0])
-print("Last fruit:", fruits[-1])
+    return input
 
-new_fruit = input("Enter fruit name: ")
-fruits.append(new_fruit)
+print(fizz_buzz(int(input("Enter a number: "))))
+"""
+import numbers
 
-print("\nAllfruits:")
-for i, fruit in enumerate(fruits):
-    print(f"{i}: {fruit}")
+# for loop
 
-student_grades = {"Tony":"A", "Robert":"B", "Mitali":"C"}
-print("Tony's grade: ",student_grades["Tony"])
-
-student_grades["Oleg"] = "B+"
-print("\nAll student grades: ")
-for name, grade in student_grades.items():
-    print(f"{name}: {grade}")
+for i in range(1, 10, 2):
+    print("Attempt", i, i * ".")
