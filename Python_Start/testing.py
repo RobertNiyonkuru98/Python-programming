@@ -73,6 +73,39 @@ print(name2)
 
 a = "Python is cool"
 print(a[7:-5])
-"""
+
 a = "Python is cool"
 print(a[0:6])
+
+
+class User:
+    id = 1
+    name = "no name"
+    __password = None
+
+    def __init__(self, new_name=None):
+        self.is_new =  True
+        if new_name is not None:
+            self.name = new_name
+
+#User.id = 98
+u = User()
+#u.id = 89
+print(u.id)
+"""
+class Base():
+    """ My base class """
+
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+
+b = Base()
+print(b.id)
+
+
+
+
+
